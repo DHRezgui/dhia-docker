@@ -3,6 +3,7 @@ services:
   node-app:
     container_name: express-node-app-container
     build: .
+    image: dhiarezgui/dhia-docker
     ports:
       - "4000:4000"
     env_file:
