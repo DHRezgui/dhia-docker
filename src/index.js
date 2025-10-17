@@ -64,7 +64,7 @@ app.get('/', async (req, res) => {
 app.get('/data', async (req, res) => {
   try {
     const products = await redisClient.get('products'); 
-    res.send(`<h1>I=Dhia Rezgui : Software Engineer !</h1><p>${products}</p>`);
+    res.send(`<h1>Dhia Rezgui : Software Engineer !</h1><p>${products}</p>`);
   } catch (err) {
     res.status(500).send('Erreur Redis');
   }
