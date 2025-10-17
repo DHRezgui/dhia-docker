@@ -55,7 +55,7 @@ const redisClient = redis.createClient({
 app.get('/', async (req, res) => {
   try {
     await redisClient.set('products', 'product....'); 
-    res.send('<h1>Hello, World!!! hi</h1>');
+    res.send('<h1>Dhia Rezgui : Software Engineer</h1>');
   } catch (err) {
     res.status(500).send('Erreur Redis');
   }
