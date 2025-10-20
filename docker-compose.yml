@@ -3,6 +3,16 @@ services:
   node-app:
     build: .
     image: dhiarezgui/dhia-docker
+    deploy:
+      replicas: 4
+      placement:
+        max_replicas_per_node: 1
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+        delay: 10s
     env_file:
       - ./.env
     depends_on:

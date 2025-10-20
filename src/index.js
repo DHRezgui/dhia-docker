@@ -56,7 +56,7 @@ const redisClient = redis.createClient({
 app.get('/', async (req, res) => {
   try {
     await redisClient.set('products', 'product....'); 
-    res.send('<h1>Dhia Rezgui : Software Engineer !!</h1>');
+    res.send('<h1>Dhia Rezgui : Software Engineer !!!</h1>');
     console.log(`trafic from : ${os.hostname()}`);
   } catch (err) {
     res.status(500).send('Erreur Redis');
@@ -66,7 +66,7 @@ app.get('/', async (req, res) => {
 app.get('/data', async (req, res) => {
   try {
     const products = await redisClient.get('products'); 
-    res.send(`<h1>Dhia Rezgui : Software Engineer !!</h1><p>${products}</p>`);
+    res.send(`<h1>Dhia Rezgui : Software Engineer !!!</h1><p>${products}</p>`);
   } catch (err) {
     res.status(500).send('Erreur Redis');
   }
